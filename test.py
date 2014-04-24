@@ -22,6 +22,7 @@ child.sendline("date")
 child.expect(prompt)
 child.sendline("kzorp -d")
 try:
+    child.readline()
     child.expect(prompt)
     if child.before == '':
         pass

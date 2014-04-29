@@ -9,8 +9,6 @@ child = pexpect.spawn('telnet 192.168.1.1 23')
 child.timeout=40
 child.logfile = sys.stdout
 
-print 'Try to turn on SSH'
-
 prompt = child.compile_pattern_list('root@.*:/#.*')
 regexp = child.compile_pattern_list('.*entered forwarding state.*')
 

@@ -14,6 +14,7 @@ def is_port_open(host, port):
 def wait_port_open(host, port, num_of_try=10):
     for i in range(num_of_try):
         if is_port_open(host, port):
+            print "Port %s is open" % port
             return True
         print "Port %s not open on %s. try" % (port, i)
         time.sleep(5)

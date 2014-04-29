@@ -24,6 +24,6 @@ child.sendline("secret")
 child.expect(prompt)
 child.sendline("exit")
 
-if wait_port_open('192.168.1.1', 22):
+if wait_port_open('192.168.1.1', 22, num_of_try=24):
     print 'SSH is ready'
 
